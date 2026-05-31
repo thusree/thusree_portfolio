@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Thusree M — Full Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/x-icon" href="./assets/images/Favicon/MTFav.png">
+<link rel="stylesheet" href="./assets/css/portfolio.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<div id="loader">
+  <div class="loader-text" id="loaderText">Initializing Portfolio</div>
+  <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+  <div class="loader-percent" id="loaderPercent">0%</div>
+</div>
+
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">MT<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#skills" onclick="closeMobile()">Skills</a>
+  <a href="#experience" onclick="closeMobile()">Experience</a>
+  <a href="#projects" onclick="closeMobile()">Projects</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-tag" id="heroTag">Full Stack Developer &middot; Dubai, UAE</div>
+    <h1 class="hero-name" id="heroName">
+      Mohamed<br>
+      <span class="accent-line">Thusree M</span>
+    </h1>
+    <div class="hero-role" id="heroRole">
+      <span id="typed"></span><span class="typed-cursor"></span>
+    </div>
+    <p class="hero-desc" id="heroDesc">
+      4+ years crafting scalable web applications with Angular, TypeScript, .NET Core &amp; MS SQL Server.
+      Building the web with precision, performance &amp; purpose.
+    </p>
+    <div class="hero-btns" id="heroBtns">
+      <a href="#contact" class="btn-primary">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Let's Work Together
+      </a>
+      <a href="#projects" class="btn-secondary">View Projects</a>
+    </div>
+  </div>
+  <div class="hero-stats" id="heroStats">
+    <div class="stat-item">
+      <div class="stat-num"><span id="expCount">0</span>+</div>
+      <div class="stat-label">Years Exp</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span id="projCount">0</span>+</div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span id="techCount">0</span>+</div>
+      <div class="stat-label">Technologies</div>
+    </div>
+  </div>
+  <div class="scroll-hint" id="scrollHint">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-label reveal">About Me</div>
+  <h2 class="section-title reveal">Turning <em>Ideas</em><br>Into Reality</h2>
+  <div class="about-grid">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo-frame">
+        <img src="./assets/images/Profile.png" alt="Mohamed Thusree M" class="about-photo">
+        <div class="about-badge">Available for Work</div>
+      </div>
+    </div>
+    <div class="about-info">
+      <p class="about-text reveal">
+        I'm a Full Stack Developer based in Dubai, UAE, with 4+ years of experience building scalable,
+        performant web applications. My expertise spans the full stack — crafting pixel-perfect Angular UIs
+        to designing robust .NET Core APIs and optimized SQL database architectures.
+      </p>
+      <p class="about-text reveal">
+        Currently at Visual Ace Business Solution (Dubai), I build enterprise dashboards, AML systems, and
+        ERP modules using Angular, DevExtreme, and .NET Core. I thrive in collaborative environments,
+        working with designers, product teams, and QA to ship solutions that are functional and delightful.
+      </p>
+      <div class="about-details">
+        <div class="detail-item reveal">
+          <div class="detail-key">Location</div>
+          <div class="detail-val">Dubai, UAE</div>
+        </div>
+        <div class="detail-item reveal">
+          <div class="detail-key">Email</div>
+          <div class="detail-val">thusree123@gmail.com</div>
+        </div>
+        <div class="detail-item reveal">
+          <div class="detail-key">Phone</div>
+          <div class="detail-val">+971 501 195 260</div>
+        </div>
+        <div class="detail-item reveal">
+          <div class="detail-key">Education</div>
+          <div class="detail-val">B.SC IT — Bharathidasan Univ.</div>
+        </div>
+        <div class="detail-item reveal">
+          <div class="detail-key">Languages</div>
+          <div class="detail-val">English, Tamil, Malayalam, Hindi</div>
+        </div>
+        <div class="detail-item reveal">
+          <div class="detail-key">Status</div>
+          <div class="detail-val">Open to Opportunities</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;" class="reveal">
+        <a href="mailto:thusree123@gmail.com" class="btn-primary">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 3h12v8H1zM1 3l6 5 6-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Get In Touch
+        </a>
+        <a href="tel:+971501195260" class="btn-secondary">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M10 9l2 2-3 2a10 10 0 01-8-8l2-3 2 2-1 2a6 6 0 004 4l1-1z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          Call / WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-label reveal">Technical Expertise</div>
+  <h2 class="section-title reveal">My <em>Stack</em></h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <span class="skill-card-icon">&#9889;</span>
+      <div class="skill-card-title">Frontend</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">Angular</span>
+        <span class="skill-tag featured">TypeScript</span>
+        <span class="skill-tag">React JS</span>
+        <span class="skill-tag">JavaScript ES6+</span>
+        <span class="skill-tag">AJAX</span>
+        <span class="skill-tag">jQuery</span>
+        <span class="skill-tag">Fabric JS</span>
+        <span class="skill-tag">GSAP</span>
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">Bootstrap</span>
+        <span class="skill-tag">SASS</span>
+        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag">DevExtreme</span>
+        <span class="skill-tag">JSON</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <span class="skill-card-icon">&#128295;</span>
+      <div class="skill-card-title">Backend &amp; Database</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">.NET Core</span>
+        <span class="skill-tag featured">Laravel</span>
+        <span class="skill-tag">PHP</span>
+        <span class="skill-tag">REST APIs</span>
+        <span class="skill-tag">MS SQL Server</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">MVC Architecture</span>
+        <span class="skill-tag">Node.js</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <span class="skill-card-icon">&#128736;</span>
+      <div class="skill-card-title">Tools &amp; DevOps</div>
+      <div class="skill-tags">
+        <span class="skill-tag featured">GitLab</span>
+        <span class="skill-tag featured">GitHub</span>
+        <span class="skill-tag">Visual Studio</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Laragon</span>
+        <span class="skill-tag">Adobe Photoshop</span>
+        <span class="skill-tag">Adobe Illustrator</span>
+        <span class="skill-tag">Windows 10/11</span>
+        <span class="skill-tag">macOS</span>
+      </div>
+    </div>
+    <div class="skill-card reveal">
+      <span class="skill-card-icon">&#128218;</span>
+      <div class="skill-card-title">Also Familiar With</div>
+      <div class="skill-tags">
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">React Native</span>
+        <span class="skill-tag">MS Office Suite</span>
+        <span class="skill-tag">Hardware Support</span>
+        <span class="skill-tag">Desktops &amp; Laptops</span>
+        <span class="skill-tag">Printers &amp; Scanners</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="section-label reveal">Work History</div>
+  <h2 class="section-title reveal">Where I've <em>Worked</em></h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-meta">
+        <span class="timeline-date">Jan 2025 &mdash; Present</span>
+        <span class="timeline-company">Visual Ace Business Solution</span>
+        <span class="timeline-loc">&#128205; Dubai, UAE</span>
+      </div>
+      <div class="timeline-title">Angular Frontend Developer</div>
+      <ul class="timeline-list">
+        <li>Developed and maintained enterprise web applications using Angular, TypeScript, HTML, and CSS.</li>
+        <li>Built interactive dashboards and reporting interfaces using DevExtreme Angular components for business analytics.</li>
+        <li>Integrated frontend modules with .NET Core REST APIs and managed data interactions with MSSQL databases.</li>
+        <li>Contributed to AML dashboards and ERP systems, developing UI modules and supporting backend integration.</li>
+        <li>Implemented dynamic data grids, charts, and filters using DevExtreme to improve data visualization.</li>
+        <li>Handled production support tickets, debugging frontend issues and coordinating with backend teams.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot dim"></div>
+      <div class="timeline-meta">
+        <span class="timeline-date">May 2024 &mdash; Oct 2024</span>
+        <span class="timeline-company">Softnova Technology (P) Ltd</span>
+        <span class="timeline-loc">&#128205; Peravurani, TN</span>
+      </div>
+      <div class="timeline-title">Full Stack Developer</div>
+      <ul class="timeline-list">
+        <li>Developed dynamic, data-driven web applications using Laravel and PHP with MySQL databases.</li>
+        <li>Created RESTful APIs to enable seamless communication between front-end and back-end systems.</li>
+        <li>Built interactive front-end features with AngularJS, JavaScript (ES6), jQuery, and AJAX.</li>
+        <li>Designed responsive UIs using Bootstrap, SASS, and CSS with a mobile-first approach.</li>
+      </ul>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot dim"></div>
+      <div class="timeline-meta">
+        <span class="timeline-date">Mar 2022 &mdash; Mar 2024</span>
+        <span class="timeline-company">Netaxis IT Solutions (P) Ltd</span>
+        <span class="timeline-loc">&#128205; Chennai, TN</span>
+      </div>
+      <div class="timeline-title">JR. Full Stack Developer</div>
+      <ul class="timeline-list">
+        <li>Developed web applications using Laravel and PHP, following MVC architecture.</li>
+        <li>Created responsive UIs using HTML, CSS, Bootstrap, and SASS.</li>
+        <li>Integrated dynamic features using JavaScript (ES6), AngularJS, AJAX, and jQuery.</li>
+        <li>Connected front-end components to back-end REST APIs for seamless data flow.</li>
+        <li>Supported database operations in MySQL, including queries and relational data management.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-label reveal">Selected Work</div>
+  <h2 class="section-title reveal">Featured <em>Projects</em></h2>
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <span class="project-num">01</span>
+      <div class="project-name">Logokitify</div>
+      <p class="project-desc">A feature-rich logo marketplace platform with dynamic image uploads, cloud storage management, and deep API integrations for seamless asset delivery and processing.</p>
+      <div class="project-stack">
+        <span>Laravel</span><span>PHP</span><span>MySQL</span>
+        <span>AngularJS</span><span>SASS</span><span>Jobs API</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:8px; flex-wrap:wrap;">
+        <a href="https://logokitify.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+          Visit Live
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="project-tag-live">&#9679; Live</span>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <span class="project-num">02</span>
+      <div class="project-name">Certificate.to</div>
+      <p class="project-desc">A digital platform for creating and managing customizable certificates and digital badges that recognize achievements and credentials, with bulk generation support.</p>
+      <div class="project-stack">
+        <span>Laravel</span><span>PHP</span><span>MySQL</span>
+        <span>AngularJS</span><span>SASS</span><span>Jobs API</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:8px; flex-wrap:wrap;">
+        <a href="https://certificate.to/" target="_blank" rel="noopener noreferrer" class="project-link">
+          Visit Live
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="project-tag-live">&#9679; Live</span>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <span class="project-num">03</span>
+      <div class="project-name">Softnova Technology</div>
+      <p class="project-desc">Corporate website with responsive design, client communication features, and seamless contact integration. Built with mobile-first approach and modern UI/UX standards.</p>
+      <div class="project-stack">
+        <span>HTML</span><span>CSS</span><span>Bootstrap</span>
+        <span>AngularJS</span><span>PHP</span><span>MySQL</span><span>EmailJS</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:8px; flex-wrap:wrap;">
+        <a href="https://softnovatechnology.com/" target="_blank" rel="noopener noreferrer" class="project-link">
+          Visit Live
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="project-tag-live">&#9679; Live</span>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <span class="project-num">04</span>
+      <div class="project-name">AML Dashboard</div>
+      <p class="project-desc">Enterprise Anti-Money Laundering compliance dashboard with dynamic data grids, advanced filtering, real-time charts, and role-based access — built for regulatory reporting at scale.</p>
+      <div class="project-stack">
+        <span>Angular</span><span>TypeScript</span><span>DevExtreme</span>
+        <span>.NET Core</span><span>MS SQL Server</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:8px;">
+        <span class="project-tag-internal">&#128274; Proprietary — Visual Ace</span>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <span class="project-num">05</span>
+      <div class="project-name">ERP System UI</div>
+      <p class="project-desc">Full-scale ERP frontend with modular UI components, deep .NET Core API integration, real-time reporting, and DevExtreme-powered data visualization tools.</p>
+      <div class="project-stack">
+        <span>Angular</span><span>TypeScript</span><span>DevExtreme</span>
+        <span>.NET Core</span><span>REST APIs</span><span>MS SQL</span>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:8px;">
+        <span class="project-tag-internal">&#128274; Proprietary — Visual Ace</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-label reveal">Get In Touch</div>
+  <h2 class="section-title reveal">Let's Build<br>Something <em>Great</em></h2>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <p class="contact-intro reveal">
+        I'm currently open to new opportunities in Dubai and globally remote. Whether you have a project in mind,
+        a role to fill, or just want to connect — my inbox is always open.
+      </p>
+      <div class="contact-methods">
+        <a href="mailto:thusree123@gmail.com" class="contact-method reveal">
+          <div class="contact-method-icon">&#9993;</div>
+          <div class="contact-method-body">
+            <div class="contact-method-key">Email</div>
+            <div class="contact-method-val">thusree123@gmail.com</div>
+          </div>
+        </a>
+        <a href="tel:+971501195260" class="contact-method reveal">
+          <div class="contact-method-icon">&#128222;</div>
+          <div class="contact-method-body">
+            <div class="contact-method-key">Phone / WhatsApp</div>
+            <div class="contact-method-val">+971 501 195 260</div>
+          </div>
+        </a>
+        <div class="contact-method reveal" style="cursor:default;">
+          <div class="contact-method-icon">&#128205;</div>
+          <div class="contact-method-body">
+            <div class="contact-method-key">Location</div>
+            <div class="contact-method-val">Dubai, UAE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal">
+      <div class="form-group">
+        <label class="form-label" for="fname">Your Name</label>
+        <input class="form-input" id="fname" type="text" placeholder="John Doe" autocomplete="off">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="femail">Your Email</label>
+        <input class="form-input" id="femail" type="email" placeholder="john@company.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fsubject">Subject</label>
+        <input class="form-input" id="fsubject" type="text" placeholder="Project / Job Opportunity">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="fmsg">Message</label>
+        <textarea class="form-textarea" id="fmsg" placeholder="Tell me about your project or opportunity..."></textarea>
+      </div>
+      <button class="form-submit" id="formSubmit" onclick="sendEmail()">Send Message &rarr;</button>
+      <div class="form-msg" id="formMsg"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-copy">&copy; 2025 Mohamed Thusree M &mdash; Full Stack Developer, Dubai UAE</div>
+  <div class="footer-links">
+    <a href="mailto:thusree123@gmail.com">Email</a>
+    <a href="tel:+971501195260">Phone</a>
+    <a href="#hero">Back to Top &uarr;</a>
+  </div>
+</footer>
+
+<a href="#contact" class="avail-badge">
+  <div class="avail-dot"></div>
+  Available for hire
+</a>
+
+<script src="./assets/js/portfolio.js"></script>
+</body>
+</html>
